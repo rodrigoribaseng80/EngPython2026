@@ -2,7 +2,7 @@ import math
 
 # Parâmetros do Circuito
 f = 60           # Frequência em Hz
-R = 10           # Resistência em Ohms
+R = 99           # Resistência em Ohms
 L = 0.05         # Indutância em Henry
 C = 0.0001       # Capacitância em Farad (100 uF)
 

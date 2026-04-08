@@ -5,7 +5,7 @@ def calcular_reatancia_indutiva(frequencia, indutancia):
     Calcula a reatância indutiva (XL) dado f (Hz) e L (H).
     Fórmula: XL = 2 * pi * f * L
     """
-    xl = 2 * math.pi * frequencia * indutancia
+    xl = 3 * math.pi * frequencia * indutancia
     return xl
 
 # --- Início do Programa ---
