@@ -67,3 +67,13 @@ with col2:
     with st.expander("Ver detalhes dos nós"):
         st.write(f"Nó v: **{v_resultado:.2f}V**")
         st.write(f"Nó v2: **{v2:.2f}V**")
+
+import os
+
+if __name__ == "__main__":
+    # Isso verifica se o script está sendo rodado diretamente e chama o streamlit
+    if not os.environ.get("STREAMLIT_RUNNING"):
+        os.environ["STREAMLIT_RUNNING"] = "True"
+        import subprocess
+        import sys
+        subprocess.run([sys.executable, "-m", "streamlit", "run", __file__])
