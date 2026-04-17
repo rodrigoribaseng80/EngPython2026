@@ -66,8 +66,29 @@ with col1:
 
 with col2:
     st.subheader("📊 Resultados")
+<<<<<<< HEAD
     st.metric("Tensão v1", f"{v_resultado:.2f} V")
     st.metric("Corrente i", f"{i_resultado:.2f} A")
     
     with st.expander("Detalhes Técnicos"):
         st.write(f"V1: {v_resultado:.3f}V | V2: {v2:.3f}V")
+=======
+
+    # Exibição das métricas
+    st.metric(label="Tensão v", value=f"{v_resultado:.2f} V")
+    st.metric(label="Corrente i", value=f"{i_resultado:.2f} A")
+
+    with st.expander("Ver detalhes dos nós"):
+        st.write(f"Nó v: **{v_resultado:.2f}V**")
+        st.write(f"Nó v2: **{v2:.2f}V**")
+
+import os
+
+if __name__ == "__main__":
+    # Isso verifica se o script está sendo rodado diretamente e chama o streamlit
+    if not os.environ.get("STREAMLIT_RUNNING"):
+        os.environ["STREAMLIT_RUNNING"] = "True"
+        import subprocess
+        import sys
+        subprocess.run([sys.executable, "-m", "streamlit", "run", __file__])
+>>>>>>> 96f616dbd9ce93df0cc83d6e2ecdc83f338ab756
